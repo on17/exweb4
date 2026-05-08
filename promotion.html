@@ -3,48 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweet Bake - โปรโมชั่น</title>
+    <title>ละมุน ขนมไทย - โปรโมชั่น</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-pink-50 text-gray-800 font-sans relative">
-
-    <nav class="bg-pink-200 shadow-md">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center gap-4">
-                    <button onclick="history.back()" class="flex items-center text-pink-700 hover:bg-pink-300 px-3 py-2 rounded-lg transition font-semibold shadow-sm bg-pink-100">
-                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                        กลับ
-                    </button>
-                    <div class="flex items-center gap-2">
-                        <span class="text-2xl">🍰</span>
-                        <span class="font-bold text-xl text-pink-700">Sweet Bake</span>
-                    </div>
-                </div>
-                <div class="hidden md:flex space-x-6 font-semibold items-center">
-                    <a href="index.html" class="text-pink-700 hover:text-pink-900 transition">หน้าแรก</a>
-                    <a href="products.html" class="text-pink-700 hover:text-pink-900 transition">เมนูขนม</a>
-                    <a href="promotion.html" class="text-pink-700 hover:text-pink-900 transition">โปรโมชั่น</a>
-                    <a href="contact.html" class="text-pink-700 hover:text-pink-900 transition">ติดต่อเรา</a>
-                </div>
-                <button class="md:hidden text-pink-700 focus:outline-none hover:bg-pink-300 p-2 rounded-lg" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                </button>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-pink-100 flex flex-col px-4 py-3 space-y-3 font-semibold shadow-inner">
-            <a href="index.html" class="text-pink-700 hover:text-pink-900">หน้าแรก</a>
-            <a href="products.html" class="text-pink-700 hover:text-pink-900">เมนูขนม</a>
-            <a href="promotion.html" class="text-pink-700 hover:text-pink-900">โปรโมชั่น</a>
-            <a href="contact.html" class="text-pink-700 hover:text-pink-900">ติดต่อเรา</a>
-        </div>
-    </nav>
 
     <div class="max-w-6xl mx-auto px-4 py-12 text-center flex flex-col items-center justify-center min-h-[70vh]">
         <h2 class="text-3xl md:text-4xl font-bold text-pink-700 mb-6">รับความคุ้มค่าสุดพิเศษประจำเดือน!</h2>
         
         <button onclick="document.getElementById('promoModal').classList.remove('hidden')" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-lg shadow-md transition text-lg">
-            🎁 กดรับโค้ดส่วนลด
+            🎁 กดรับโค้ดส่วนลดขนมไทย
         </button>
     </div>
 
@@ -54,8 +22,8 @@
                 <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-pink-100 mb-4">
                     <span class="text-3xl">🎉</span>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">รับส่วนลด 20%</h3>
-                <p class="text-gray-600 mb-6">เพียงแจ้งโค้ด <span class="font-bold text-pink-600 text-lg">YUMMY20</span> ที่หน้าร้านเมื่อซื้อครบ 300 บาท</p>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">รับส่วนลด 15%</h3>
+                <p class="text-gray-600 mb-6">เพียงแจ้งโค้ด <span class="font-bold text-pink-600 text-lg">THAI15</span> ที่หน้าร้านเมื่อซื้อขนมมงคลครบ 250 บาท</p>
                 
                 <button onclick="document.getElementById('promoModal').classList.add('hidden')" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded-lg transition">
                     ปิดหน้าต่าง
