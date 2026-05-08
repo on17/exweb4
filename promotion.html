@@ -6,7 +6,8 @@
     <title>ละมุน ขนมไทย - โปรโมชั่นพิเศษ</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-emerald-50 text-gray-800 font-sans">
+<body class="bg-emerald-50 text-gray-800 font-sans relative">
+
     <nav class="bg-emerald-200 shadow-md">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
@@ -22,7 +23,7 @@
                 <div class="hidden md:flex space-x-6 font-semibold items-center">
                     <a href="index.html" class="text-emerald-800 hover:text-emerald-950 transition">หน้าแรก</a>
                     <a href="products.html" class="text-emerald-800 hover:text-emerald-950 transition">เมนูขนม</a>
-                    <a href="promotion.html" class="text-emerald-800 hover:text-emerald-950 transition">โปรโมชั่น</a>
+                    <a href="promotion.html" class="text-emerald-800 hover:text-emerald-950 transition text-emerald-950 underline">โปรโมชั่น</a>
                     <a href="contact.html" class="text-emerald-800 hover:text-emerald-950 transition">ติดต่อเรา</a>
                 </div>
                 <button class="md:hidden text-emerald-800 focus:outline-none hover:bg-emerald-300 p-2 rounded-lg" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
@@ -37,75 +38,151 @@
             <a href="contact.html" class="text-emerald-800 hover:text-emerald-950">ติดต่อเรา</a>
         </div>
     </nav>
+
     <div class="max-w-6xl mx-auto px-4 py-12">
         <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold text-emerald-800 mb-2">โปรโมชั่นจับคู่สุดคุ้ม</h2>
-            <p class="text-emerald-600">รีบสั่งก่อนหมดเวลาพิเศษ!</p>
+            <h2 class="text-4xl font-bold text-emerald-800 mb-2 font-serif">จับคู่ของหวาน รสชาตละมุน</h2>
+            <p class="text-emerald-600 italic">รีบสั่งก่อนหมดเวลาพิเศษ!</p>
         </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-emerald-100 flex flex-col">
-                <div class="flex h-64">
+            
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-emerald-100 flex flex-col hover:shadow-2xl transition-all duration-300">
+                <div class="flex h-64 border-b-2 border-emerald-50">
                     <img src="images/product1.png" alt="ขนมถ้วย" class="w-1/2 object-cover border-r-2 border-white">
                     <img src="images/product5.png" alt="ขนมครก" class="w-1/2 object-cover">
                 </div>
                 <div class="p-8 flex flex-col flex-grow text-center">
                     <div class="bg-red-100 text-red-600 font-bold px-4 py-1 rounded-full w-max mx-auto mb-4 text-sm">Best Seller</div>
                     <h3 class="text-2xl font-bold text-emerald-900 mb-2">เซตคู่หูกะทิสด</h3>
-                    <p class="text-gray-600 mb-6 italic">"ขนมถ้วยหวานละมุน จับคู่ ขนมครกกรอบนอกนุ่มใน"</p>
-                    <div class="text-3xl font-bold text-emerald-700 mb-6">เพียง ฿55 <span class="text-lg text-gray-400 line-through">฿60</span></div>
-                    <div class="bg-emerald-50 rounded-2xl py-4 border border-emerald-100">
-                        <p class="text-xs text-emerald-600 uppercase font-bold tracking-wider mb-2">เหลือเวลาอีก</p>
+                    <p class="text-gray-600 mb-6 italic text-sm">"ขนมถ้วยหวานละมุน จับคู่ ขนมครกกรอบนอกนุ่มใน"</p>
+                    <div class="text-3xl font-bold text-emerald-700 mb-4">เพียง ฿55 <span class="text-lg text-gray-400 line-through font-normal ml-2">฿60</span></div>
+                    
+                    <div class="bg-emerald-50 rounded-2xl py-4 border border-emerald-100 mb-6">
+                        <p class="text-[10px] text-emerald-600 uppercase font-bold tracking-widest mb-1">เหลือเวลาอีก</p>
                         <div class="flex justify-center gap-4 text-2xl font-mono font-bold text-emerald-800">
-                            <div class="timer-unit"><span id="hours1">00</span><p class="text-[10px] font-sans">ชม.</p></div>
-                            <span>:</span>
-                            <div class="timer-unit"><span id="minutes1">00</span><p class="text-[10px] font-sans">นาที</p></div>
-                            <span>:</span>
-                            <div class="timer-unit"><span id="seconds1">00</span><p class="text-[10px] font-sans">วิ</p></div>
+                            <div class="timer-unit"><span id="hours1">00</span><p class="text-[9px] font-sans font-normal uppercase">ชม.</p></div>
+                            <span class="animate-pulse">:</span>
+                            <div class="timer-unit"><span id="minutes1">00</span><p class="text-[9px] font-sans font-normal uppercase">นาที</p></div>
+                            <span class="animate-pulse">:</span>
+                            <div class="timer-unit"><span id="seconds1">00</span><p class="text-[9px] font-sans font-normal uppercase">วิ</p></div>
                         </div>
                     </div>
+
+                    <button onclick="openOrderModal('เซตคู่หูกะทิสด')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition transform active:scale-95">
+                        สั่งซื้อโปรโมชั่นนี้
+                    </button>
                 </div>
             </div>
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-emerald-100 flex flex-col">
-                <div class="flex h-64">
+
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-emerald-100 flex flex-col hover:shadow-2xl transition-all duration-300">
+                <div class="flex h-64 border-b-2 border-emerald-50">
                     <img src="images/product3.png" alt="ข้าวเหนียวมะม่วง" class="w-1/2 object-cover border-r-2 border-white">
                     <img src="images/product2.png" alt="ข้าวเหนียวดำ" class="w-1/2 object-cover">
                 </div>
                 <div class="p-8 flex flex-col flex-grow text-center">
                     <div class="bg-orange-100 text-orange-600 font-bold px-4 py-1 rounded-full w-max mx-auto mb-4 text-sm">Special Offer</div>
                     <h3 class="text-2xl font-bold text-emerald-900 mb-2">เซตคู่ขวัญข้าวเหนียว</h3>
-                    <p class="text-gray-600 mb-6 italic">"ข้าวเหนียวมะม่วงหวานฉ่ำ จับคู่ ข้าวเหนียวดำเปียกเข้มข้น"</p>
-                    <div class="text-3xl font-bold text-emerald-700 mb-6">เพียง ฿85 <span class="text-lg text-gray-400 line-through">฿95</span></div>
-                    <div class="bg-emerald-50 rounded-2xl py-4 border border-emerald-100">
-                        <p class="text-xs text-emerald-600 uppercase font-bold tracking-wider mb-2">เหลือเวลาอีก</p>
+                    <p class="text-gray-600 mb-6 italic text-sm">"ข้าวเหนียวมะม่วงหวานฉ่ำ จับคู่ ข้าวเหนียวดำเปียกเข้มข้น"</p>
+                    <div class="text-3xl font-bold text-emerald-700 mb-4">เพียง ฿85 <span class="text-lg text-gray-400 line-through font-normal ml-2">฿95</span></div>
+                    
+                    <div class="bg-emerald-50 rounded-2xl py-4 border border-emerald-100 mb-6">
+                        <p class="text-[10px] text-emerald-600 uppercase font-bold tracking-widest mb-1">เหลือเวลาอีก</p>
                         <div class="flex justify-center gap-4 text-2xl font-mono font-bold text-emerald-800">
-                            <div class="timer-unit"><span id="hours2">00</span><p class="text-[10px] font-sans">ชม.</p></div>
-                            <span>:</span>
-                            <div class="timer-unit"><span id="minutes2">00</span><p class="text-[10px] font-sans">นาที</p></div>
-                            <span>:</span>
-                            <div class="timer-unit"><span id="seconds2">00</span><p class="text-[10px] font-sans">วิ</p></div>
+                            <div class="timer-unit"><span id="hours2">00</span><p class="text-[9px] font-sans font-normal uppercase">ชม.</p></div>
+                            <span class="animate-pulse">:</span>
+                            <div class="timer-unit"><span id="minutes2">00</span><p class="text-[9px] font-sans font-normal uppercase">นาที</p></div>
+                            <span class="animate-pulse">:</span>
+                            <div class="timer-unit"><span id="seconds2">00</span><p class="text-[9px] font-sans font-normal uppercase">วิ</p></div>
                         </div>
                     </div>
+
+                    <button onclick="openOrderModal('เซตคู่ขวัญข้าวเหนียว')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition transform active:scale-95">
+                        สั่งซื้อโปรโมชั่นนี้
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="orderModal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 px-4 transition-all">
+        <div class="bg-white rounded-3xl p-8 max-w-sm w-full shadow-2xl transform scale-100">
+            <div class="text-center">
+                <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-emerald-100 mb-4">
+                    <span class="text-3xl">🎁</span>
+                </div>
+                <h3 class="text-2xl font-bold text-emerald-900 mb-1" id="modalProductName">สั่งซื้อโปรโมชั่น</h3>
+                <p class="text-gray-500 mb-6 text-sm italic">พิเศษ! เฉพาะสั่งผ่านหน้าโปรโมชั่นเท่านั้น</p>
+                
+                <div class="flex items-center justify-center gap-4 mb-8">
+                    <button onclick="decreaseQty()" class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold rounded-full w-10 h-10 flex items-center justify-center text-xl transition">-</button>
+                    <input type="number" id="orderQty" value="1" min="1" readonly class="w-16 text-center border-b-2 border-emerald-200 py-1 text-2xl font-bold text-emerald-800 bg-white focus:outline-none">
+                    <button onclick="increaseQty()" class="bg-emerald-100 hover:bg-emerald-200 text-emerald-800 font-bold rounded-full w-10 h-10 flex items-center justify-center text-xl transition">+</button>
+                </div>
+                
+                <div class="flex gap-4">
+                    <button onclick="closeOrderModal()" class="w-1/2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded-xl transition">ยกเลิก</button>
+                    <button onclick="confirmOrder()" class="w-1/2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl transition shadow-lg">ยืนยัน</button>
                 </div>
             </div>
         </div>
     </div>
+
     <script>
+        // --- ส่วนที่ 1: ระบบนับเวลาถอยหลัง (Timer) ---
         function startTimer(duration, hDisplay, mDisplay, sDisplay) {
             let timer = duration, hours, minutes, seconds;
             setInterval(function () {
                 hours = parseInt(timer / 3600, 10);
                 minutes = parseInt((timer % 3600) / 60, 10);
                 seconds = parseInt(timer % 60, 10);
+
                 hDisplay.textContent = hours < 10 ? "0" + hours : hours;
                 mDisplay.textContent = minutes < 10 ? "0" + minutes : minutes;
                 sDisplay.textContent = seconds < 10 ? "0" + seconds : seconds;
+
                 if (--timer < 0) { timer = duration; }
             }, 1000);
         }
+
+        // --- ส่วนที่ 2: ระบบจัดการ Modal สั่งซื้อ ---
+        function openOrderModal(productName) {
+            document.getElementById('modalProductName').innerText = productName;
+            document.getElementById('orderQty').value = 1;
+            document.getElementById('orderModal').classList.remove('hidden');
+        }
+
+        function closeOrderModal() {
+            document.getElementById('orderModal').classList.add('hidden');
+        }
+
+        function increaseQty() {
+            let input = document.getElementById('orderQty');
+            input.value = parseInt(input.value) + 1;
+        }
+
+        function decreaseQty() {
+            let input = document.getElementById('orderQty');
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+
+        function confirmOrder() {
+            let productName = document.getElementById('modalProductName').innerText;
+            let qty = document.getElementById('orderQty').value;
+            alert('🎉 สั่งซื้อสำเร็จ!\n\nคุณได้รับสิทธิ์โปรโมชั่นเซต "' + productName + '" จำนวน ' + qty + ' ชุดครับ');
+            closeOrderModal();
+        }
+
+        // เริ่มทำงานเมื่อโหลดหน้าเสร็จ
         window.onload = function () {
-            startTimer(7200, document.querySelector('#hours1'), document.querySelector('#minutes1'), document.querySelector('#seconds1'));
-            startTimer(14400, document.querySelector('#hours2'), document.querySelector('#minutes2'), document.querySelector('#seconds2'));
+            // ตั้งเวลาถอยหลัง 1:59:56 และ 3:59:56 (วินาที)
+            startTimer(7196, document.querySelector('#hours1'), document.querySelector('#minutes1'), document.querySelector('#seconds1'));
+            startTimer(14396, document.querySelector('#hours2'), document.querySelector('#minutes2'), document.querySelector('#seconds2'));
         };
     </script>
+
 </body>
 </html>
