@@ -7,6 +7,16 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-emerald-50: oklch(97.9% 0.021 166.113);
+    --color-emerald-100: oklch(95% 0.052 163.051);
+    --color-emerald-200: oklch(90.5% 0.093 164.15);
+    --color-emerald-300: oklch(84.5% 0.143 164.978);
+    --color-emerald-400: oklch(76.5% 0.177 163.223);
+    --color-emerald-600: oklch(59.6% 0.145 163.225);
+    --color-emerald-700: oklch(50.8% 0.118 165.612);
+    --color-emerald-800: oklch(43.2% 0.095 166.913);
+    --color-emerald-900: oklch(37.8% 0.077 168.94);
+    --color-emerald-950: oklch(26.2% 0.051 172.552);
     --color-pink-50: oklch(97.1% 0.014 343.198);
     --color-pink-100: oklch(94.8% 0.028 342.258);
     --color-pink-200: oklch(89.9% 0.061 343.231);
@@ -27,6 +37,7 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-sm: 24rem;
+    --container-xl: 36rem;
     --container-2xl: 42rem;
     --container-5xl: 64rem;
     --container-6xl: 72rem;
@@ -265,6 +276,9 @@
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
+  .h-64 {
+    height: calc(var(--spacing) * 64);
+  }
   .min-h-\[70vh\] {
     min-height: 70vh;
   }
@@ -294,6 +308,9 @@
   }
   .max-w-sm {
     max-width: var(--container-sm);
+  }
+  .max-w-xl {
+    max-width: var(--container-xl);
   }
   .flex-1 {
     flex: 1;
@@ -330,6 +347,9 @@
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
@@ -381,6 +401,9 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-emerald-100 {
+    border-color: var(--color-emerald-100);
+  }
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
@@ -389,6 +412,18 @@
   }
   .bg-black {
     background-color: var(--color-black);
+  }
+  .bg-emerald-50 {
+    background-color: var(--color-emerald-50);
+  }
+  .bg-emerald-100 {
+    background-color: var(--color-emerald-100);
+  }
+  .bg-emerald-200 {
+    background-color: var(--color-emerald-200);
+  }
+  .bg-emerald-600 {
+    background-color: var(--color-emerald-600);
   }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
@@ -488,6 +523,18 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .text-emerald-600 {
+    color: var(--color-emerald-600);
+  }
+  .text-emerald-700 {
+    color: var(--color-emerald-700);
+  }
+  .text-emerald-800 {
+    color: var(--color-emerald-800);
+  }
+  .text-emerald-900 {
+    color: var(--color-emerald-900);
+  }
   .text-gray-600 {
     color: var(--color-gray-600);
   }
@@ -553,6 +600,27 @@
     --tw-duration: 300ms;
     transition-duration: 300ms;
   }
+  .hover\:bg-emerald-200 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-emerald-200);
+      }
+    }
+  }
+  .hover\:bg-emerald-300 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-emerald-300);
+      }
+    }
+  }
+  .hover\:bg-emerald-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-emerald-700);
+      }
+    }
+  }
   .hover\:bg-gray-300 {
     &:hover {
       @media (hover: hover) {
@@ -578,6 +646,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-pink-600);
+      }
+    }
+  }
+  .hover\:text-emerald-950 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-emerald-950);
       }
     }
   }
@@ -607,6 +682,11 @@
     &:focus {
       --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus\:ring-emerald-400 {
+    &:focus {
+      --tw-ring-color: var(--color-emerald-400);
     }
   }
   .focus\:ring-pink-400 {
@@ -656,6 +736,11 @@
     @media (width >= 48rem) {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .lg\:grid-cols-3 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
   .lg\:grid-cols-4 {
