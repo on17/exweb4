@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Bake - โปรโมชั่น</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-pink-50 text-gray-800 font-sans relative">
+
+    <div class="max-w-6xl mx-auto px-4 py-12 text-center flex flex-col items-center justify-center min-h-[70vh]">
+        <h2 class="text-3xl md:text-4xl font-bold text-pink-700 mb-6">รับความคุ้มค่าสุดพิเศษประจำเดือน!</h2>
+        
+        <button onclick="document.getElementById('promoModal').classList.remove('hidden')" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-lg shadow-md transition text-lg">
+            🎁 กดรับโค้ดส่วนลด
+        </button>
+    </div>
+
+    <div id="promoModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4 transition-opacity">
+        <div class="bg-white rounded-2xl p-8 max-w-sm w-full shadow-2xl">
+            <div class="text-center">
+                <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-pink-100 mb-4">
+                    <span class="text-3xl">🎉</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">รับส่วนลด 20%</h3>
+                <p class="text-gray-600 mb-6">เพียงแจ้งโค้ด <span class="font-bold text-pink-600 text-lg">YUMMY20</span> ที่หน้าร้านเมื่อซื้อครบ 300 บาท</p>
+                
+                <button onclick="document.getElementById('promoModal').classList.add('hidden')" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded-lg transition">
+                    ปิดหน้าต่าง
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
