@@ -8,8 +8,40 @@
 </head>
 <body class="bg-emerald-50 text-gray-800 font-sans">
 
+    <nav class="bg-emerald-200 shadow-md">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center gap-4">
+                    <button onclick="history.back()" class="flex items-center text-emerald-800 hover:bg-emerald-300 px-3 py-2 rounded-lg transition font-semibold shadow-sm bg-emerald-100">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> กลับ
+                    </button>
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl">🍮</span>
+                        <span class="font-bold text-xl text-emerald-800">ละมุน ขนมไทย</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-6 font-semibold items-center">
+                    <a href="index.html" class="text-emerald-800 hover:text-emerald-950 transition">หน้าแรก</a>
+                    <a href="products.html" class="text-emerald-800 hover:text-emerald-950 transition">เมนูขนม</a>
+                    <a href="promotion.html" class="text-emerald-800 hover:text-emerald-950 transition">โปรโมชั่น</a>
+                    <a href="contact.html" class="text-emerald-800 hover:text-emerald-950 transition">ติดต่อเรา</a>
+                </div>
+                <button class="md:hidden text-emerald-800 focus:outline-none hover:bg-emerald-300 p-2 rounded-lg" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-emerald-100 flex flex-col px-4 py-3 space-y-3 font-semibold shadow-inner">
+            <a href="index.html" class="text-emerald-800 hover:text-emerald-950">หน้าแรก</a>
+            <a href="products.html" class="text-emerald-800 hover:text-emerald-950">เมนูขนม</a>
+            <a href="promotion.html" class="text-emerald-800 hover:text-emerald-950">โปรโมชั่น</a>
+            <a href="contact.html" class="text-emerald-800 hover:text-emerald-950">ติดต่อเรา</a>
+        </div>
+    </nav>
+
     <div class="max-w-5xl mx-auto px-4 py-12">
         <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-10 border border-emerald-100">
+            
             <div class="flex-1">
                 <h2 class="text-3xl font-bold text-emerald-800 mb-4">แวะมาลิ้มรสความอร่อย</h2>
                 <p class="text-gray-600 mb-6">ร้านเปิดให้บริการทุกวัน 07:00 - 18:00 น. สามารถสั่งทำขนมมงคลล่วงหน้าได้ผ่านช่องทางด้านล่าง</p>
@@ -19,6 +51,7 @@
                     <p class="flex items-center gap-2">📱 LINE: @lamunthai</p>
                 </div>
             </div>
+
             <div class="flex-1 bg-emerald-50 p-6 rounded-xl border border-emerald-100">
                 <h3 class="text-xl font-bold mb-4 text-emerald-900">สอบถามคิวทำขนม</h3>
                 <form class="flex flex-col gap-4">
@@ -28,6 +61,7 @@
                     <button type="button" class="bg-emerald-600 text-white font-bold py-3 rounded-lg hover:bg-emerald-700 transition">ส่งข้อความ</button>
                 </form>
             </div>
+
         </div>
     </div>
 
