@@ -9,30 +9,38 @@
 <body class="bg-pink-50 text-gray-800 font-sans">
 
     <nav class="bg-pink-200 shadow-md">
-        <div class="max-w-6xl mx-auto px-4">
+        <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <div class="flex items-center gap-2">
-                    <span class="text-2xl">🍰</span>
-                    <span class="font-bold text-xl text-pink-700">Sweet Bake</span>
+                
+                <div class="flex items-center gap-4">
+                    <button onclick="history.back()" class="flex items-center text-pink-700 hover:bg-pink-300 px-3 py-2 rounded-lg transition font-semibold shadow-sm bg-pink-100">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                        กลับ
+                    </button>
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl">🍰</span>
+                        <span class="font-bold text-xl text-pink-700">Sweet Bake</span>
+                    </div>
                 </div>
                 
-                <div class="hidden md:flex space-x-6 font-semibold">
-                    <a href="index.html" class="text-pink-600 hover:text-pink-800">หน้าแรก</a>
-                    <a href="products.html" class="hover:text-pink-800">เมนูขนม</a>
-                    <a href="promotion.html" class="hover:text-pink-800">โปรโมชั่น</a>
-                    <a href="contact.html" class="hover:text-pink-800">ติดต่อเรา</a>
+                <div class="hidden md:flex space-x-6 font-semibold items-center">
+                    <a href="index.html" class="text-pink-700 hover:text-pink-900 transition">หน้าแรก</a>
+                    <a href="products.html" class="text-pink-700 hover:text-pink-900 transition">เมนูขนม</a>
+                    <a href="promotion.html" class="text-pink-700 hover:text-pink-900 transition">โปรโมชั่น</a>
+                    <a href="contact.html" class="text-pink-700 hover:text-pink-900 transition">ติดต่อเรา</a>
                 </div>
 
-                <button class="md:hidden text-pink-700 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <button class="md:hidden text-pink-700 focus:outline-none hover:bg-pink-300 p-2 rounded-lg" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-pink-100 flex flex-col px-4 py-2 space-y-2 font-semibold">
-            <a href="index.html" class="text-pink-600">หน้าแรก</a>
-            <a href="products.html" class="hover:text-pink-800">เมนูขนม</a>
-            <a href="promotion.html" class="hover:text-pink-800">โปรโมชั่น</a>
-            <a href="contact.html" class="hover:text-pink-800">ติดต่อเรา</a>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-pink-100 flex flex-col px-4 py-3 space-y-3 font-semibold shadow-inner">
+            <a href="index.html" class="text-pink-700 hover:text-pink-900">หน้าแรก</a>
+            <a href="products.html" class="text-pink-700 hover:text-pink-900">เมนูขนม</a>
+            <a href="promotion.html" class="text-pink-700 hover:text-pink-900">โปรโมชั่น</a>
+            <a href="contact.html" class="text-pink-700 hover:text-pink-900">ติดต่อเรา</a>
         </div>
     </nav>
 

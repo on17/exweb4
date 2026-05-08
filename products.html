@@ -8,6 +8,38 @@
 </head>
 <body class="bg-pink-50 text-gray-800 font-sans">
 
+    <nav class="bg-pink-200 shadow-md">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center gap-4">
+                    <button onclick="history.back()" class="flex items-center text-pink-700 hover:bg-pink-300 px-3 py-2 rounded-lg transition font-semibold shadow-sm bg-pink-100">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                        กลับ
+                    </button>
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl">🍰</span>
+                        <span class="font-bold text-xl text-pink-700">Sweet Bake</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-6 font-semibold items-center">
+                    <a href="index.html" class="text-pink-700 hover:text-pink-900 transition">หน้าแรก</a>
+                    <a href="products.html" class="text-pink-700 hover:text-pink-900 transition">เมนูขนม</a>
+                    <a href="promotion.html" class="text-pink-700 hover:text-pink-900 transition">โปรโมชั่น</a>
+                    <a href="contact.html" class="text-pink-700 hover:text-pink-900 transition">ติดต่อเรา</a>
+                </div>
+                <button class="md:hidden text-pink-700 focus:outline-none hover:bg-pink-300 p-2 rounded-lg" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-pink-100 flex flex-col px-4 py-3 space-y-3 font-semibold shadow-inner">
+            <a href="index.html" class="text-pink-700 hover:text-pink-900">หน้าแรก</a>
+            <a href="products.html" class="text-pink-700 hover:text-pink-900">เมนูขนม</a>
+            <a href="promotion.html" class="text-pink-700 hover:text-pink-900">โปรโมชั่น</a>
+            <a href="contact.html" class="text-pink-700 hover:text-pink-900">ติดต่อเรา</a>
+        </div>
+    </nav>
+
     <div class="max-w-6xl mx-auto px-4 py-12">
         <h2 class="text-3xl font-bold text-center text-pink-700 mb-10">เมนูแนะนำของเรา</h2>
 
@@ -17,7 +49,7 @@
                 <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500" alt="Cake" class="h-48 w-full object-cover">
                 <div class="p-5 flex flex-col flex-grow">
                     <h3 class="text-xl font-bold mb-2 text-pink-800">เค้กช็อกโกแลตลาวา</h3>
-                    <p class="text-gray-600 flex-grow mb-4 text-sm">เค้กช็อกโกแลตเข้มข้น ไส้ลาวาเยิ้มๆ ทานคู่กับไอศกรีม</p>
+                    <p class="text-gray-600 flex-grow mb-4 text-sm">เค้กช็อกโกแลตเข้มข้น ไส้ลาวาเยิ้มๆ</p>
                     <div class="flex justify-between items-center mt-auto">
                         <span class="text-pink-600 font-bold text-lg">฿120</span>
                         <button class="bg-pink-100 text-pink-700 px-4 py-2 rounded-lg hover:bg-pink-200 transition font-semibold">สั่งซื้อ</button>
@@ -29,15 +61,39 @@
                 <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500" alt="Donut" class="h-48 w-full object-cover">
                 <div class="p-5 flex flex-col flex-grow">
                     <h3 class="text-xl font-bold mb-2 text-pink-800">โดนัทเคลือบสตรอว์เบอร์รี</h3>
-                    <p class="text-gray-600 flex-grow mb-4 text-sm">โดนัทแป้งนุ่ม เคลือบน้ำตาลสตรอว์เบอร์รีหอมหวาน</p>
+                    <p class="text-gray-600 flex-grow mb-4 text-sm">โดนัทแป้งนุ่ม เคลือบน้ำตาลสตรอว์เบอร์รี</p>
                     <div class="flex justify-between items-center mt-auto">
                         <span class="text-pink-600 font-bold text-lg">฿45</span>
                         <button class="bg-pink-100 text-pink-700 px-4 py-2 rounded-lg hover:bg-pink-200 transition font-semibold">สั่งซื้อ</button>
                     </div>
                 </div>
             </div>
-
+            
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition">
+                <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=500" alt="Macaron" class="h-48 w-full object-cover">
+                <div class="p-5 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold mb-2 text-pink-800">มาการองพาสเทล</h3>
+                    <p class="text-gray-600 flex-grow mb-4 text-sm">มาการองกรอบนอกนุ่มใน หลากหลายรสชาติ</p>
+                    <div class="flex justify-between items-center mt-auto">
+                        <span class="text-pink-600 font-bold text-lg">฿60</span>
+                        <button class="bg-pink-100 text-pink-700 px-4 py-2 rounded-lg hover:bg-pink-200 transition font-semibold">สั่งซื้อ</button>
+                    </div>
+                </div>
             </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=500" alt="Cupcake" class="h-48 w-full object-cover">
+                <div class="p-5 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold mb-2 text-pink-800">คัพเค้กวานิลลา</h3>
+                    <p class="text-gray-600 flex-grow mb-4 text-sm">เนื้อเค้กนุ่มฟู พร้อมครีมวานิลลาหวานละมุน</p>
+                    <div class="flex justify-between items-center mt-auto">
+                        <span class="text-pink-600 font-bold text-lg">฿55</span>
+                        <button class="bg-pink-100 text-pink-700 px-4 py-2 rounded-lg hover:bg-pink-200 transition font-semibold">สั่งซื้อ</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
 </body>
